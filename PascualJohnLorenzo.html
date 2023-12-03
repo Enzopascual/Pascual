@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thrifter's Paradise</title>
+    <style>
+        body {
+            font-family: bradly hnd, fantasy;
+            margin: 0;
+            padding: 0;
+            background-image: url('Yep.jpeg');
+            background-size: cover;
+            background-position: center;
+            
+        }
+
+        header {
+            background-color: #333;
+            color: skyblue;
+            text-align: center;
+            padding: 1em;
+            width: 1000px;
+        }
+
+        section {
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            background-color: blanchedalmond;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: Right;
+            bottom: 0;
+            width: 20%;
+        }
+
+        #checkoutSection {
+            display: none;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form label {
+            margin-bottom: 1px;
+        }
+
+        form textarea {
+            height: 100px;
+        }
+
+        button {
+            margin-top: 10px;
+            cursor: pointer;
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            width: 180px;
+            height: 50px;
+        }
+
+        {
+            display: none;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form label {
+            margin-bottom: 10px;
+        }
+
+        form textarea {
+            height: 100px;
+        }
+        
+
+        main {
+            display: center;
+            overflow: hidden;
+            margin: 10px;
+        }
+
+        #productCarousel {
+            width: 100%;
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            
+        }
+
+        article {
+            border: 6px ;
+            padding: 2px;
+            margin: 1px;
+            background-color: white;
+            text-align: ;
+            width: 20px; /* Adjust width as needed */
+            border-radius: 20px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            border: 50px ;
+        }
+
+        /* Navigation buttons */
+        #prevBtn,#nextBtn {
+            cursor: pointer;
+            position: absolute;
+            top: 25%;
+            transform:(-50%);
+            font-size: 20px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 1px;
+            padding: 1px;
+        }
+
+        #prevBtn {
+            left: 10px;
+        }
+
+        #nextBtn {
+            right: 10px;
+        }
+        
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>THRIFTOPIA</h1>
+    </header>
+
+    <h2>NEW ARRIVAL</h2>
+    <main>
+        <button id="prevBtn" onclick="prevProduct()">❮</button>
+        <div id="productCarousel">
+            <article class="carousel-item"> 
+            <img src="product 1.jpeg" alt="NIKE POLO" style="width: 400px; height: 500px;">
+                <h3>NIKE POLO</h3>
+                <p>Vintage white polo. Price: Php250</p>
+                <button onclick="addToCart('NIKE POLO', 250)">Add to Cart</button>
+            </article>
+            <article class="carousel-item">
+            <img src="product3.jpeg"  alt="NIKE SWEATPANTS" style="width: 400px; height: 500px;">
+            <h3>NIKE SWEATPANTS</h3>
+            <p>Vintage sweatpants. Price: Php300</p>
+            <button onclick="addToCart('NIKE SWEATPANTS', 300)">Add to Cart</button>
+            </article>
+            <article class="carousel-item">
+            <img src="product2.jpg" alt="NIKE WINDBREAKER" style="width: 400px; height: 500px;">
+                <h3>NIKE WINDBREAKER</h3>
+                <p>Vintage windbreaker. Price: Php350</p>
+                <button onclick="addToCart('NIKE WINDBREAKER', 350)">Add to Cart</button>
+            </article>
+            <!-- Add more carousel items for additional products -->
+        </div>
+        <button id="nextBtn" onclick="nextProduct()">Right</button>
+        </div>
+        <button id="prevBtn" onclick="prevProduct()">Left</button></button>
+    </main>
+    <h2>VINTAGE</h2>
+   <section>
+        <div class="product">
+            <img src="product 1.jpeg" alt="Product 1" style="width: 400px; height: 500px;">
+            <h3>NIKE POLO</h3>
+            <p>Vintage white polo. Price: Php250</p>
+            <button onclick="addToCart('NIKE POLO', 250)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="product2.jpg" alt="NIKE WINDBREAKER" style="width: 400px; height: 500px;">
+            <h3>NIKE WINDBREAKER</h3>
+            <p>Vintage windbreaker. Price: Php350</p>
+            <button onclick="addToCart('NIKE WINDBREAKER', 350)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="product3.jpeg" alt="NIKE SWEATPANTS" style="width: 400px; height: 500px;">
+            <h3>NIKE SWEATPANTS</h3>
+            <p>Vintage sweatpants. Price: Php300</p>
+            <button onclick="addToCart('NIKE SWEATPANTS', 300)">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <img src="product3.jpeg" alt="NIKE SWEATPANTS" style="width: 400px; height: 500px;">
+            <h3>NIKE SWEATPANTS</h3>
+            <p>Vintage sweatpants. Price: Php300</p>
+            <button onclick="addToCart('NIKE SWEATPANTS', 300)">Add to Cart</button>
+        </div>
+
+
+        <!-- Add more products as needed -->
+
+    </section>
+    <!-- Checkout Section -->
+    <section id="checkoutSection">
+        <h2>Checkout</h2>
+        <form id="checkoutForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea><br>
+
+            <button type="button" onclick="completePurchase()">Complete Purchase</button>
+        </form>
+    </section>
+
+       <section>
+        <h2>Shopping Cart</h2>
+        <ul id="cart"></ul>
+        <p>Total: Php<span id="total">0.00</span></p>
+        <button onclick="checkout()">Checkout</button>
+    </section>
+    <section>
+        <!-- Your existing shopping cart code here -->
+    </section>
+
+    <footer>
+        &copy; 2023 Shopping Website
+    </footer>
+
+    <script>
+    var currentIndex = 0;
+    var totalProducts = document.querySelectorAll('.carousel-item').length;
+
+    function showProduct(index) {
+        var carousel = document.getElementById('productCarousel');
+        currentIndex = index;
+        var translateValue = -index * 100 + '%';
+        carousel.style.transform = 'translateX(' + translateValue + ')';
+    }
+
+    function nextProduct() {
+        if (currentIndex < totalProducts - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        showProduct(currentIndex);
+    }
+
+    function prevProduct() {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = totalProducts - 1;
+        }
+        showProduct(currentIndex);
+    }
+
+    // Example: Show the first product initially
+    showProduct(currentIndex);
+
+    // Automatic sliding
+    setInterval(nextProduct, 3000); // Change the interval as needed
+
+    var cart = [];
+    var total = 0;
+
+    function addToCart(product, price) {
+        cart.push({ product: product, price: price });
+        total += price;
+        updateCart();
+    }
+
+    function updateCart() {
+        var cartList = document.getElementById('cart');
+        var totalSpan = document.getElementById('total');
+        cartList.innerHTML = '';
+        cart.forEach(function (item) {
+            var li = document.createElement('li');
+            li.textContent = item.product + ' - Php' + item.price;
+            cartList.appendChild(li);
+        });
+        totalSpan.textContent = total.toFixed(2);
+    }
+
+    function checkout() {
+        showCheckout();
+        updateCart();
+    }
+
+    function showCheckout() {
+        document.getElementById('checkoutSection').style.display = 'block';
+    }
+
+    function completePurchase() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var address = document.getElementById('address').value;
+
+        alert('Purchase completed!\nName: ' + name + '\nEmail: ' + email + '\nAddress: ' + address);
+
+        document.getElementById('checkoutForm').reset();
+        document.getElementById('checkoutSection').style.display = 'none';
+
+        cart = [];
+        total = 0;
+        updateCart();
+    }
+</script>
+
+
+</body>
+
+</html>
